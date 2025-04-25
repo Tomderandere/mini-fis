@@ -8,12 +8,12 @@ Coach::Coach()
 
 void Coach::addCeilingDisplay(Display const& display)
 {
-    // TODO
+    ceiling_displays.push_back(display);
 }
 
 void Coach::addSeatDisplay(std::string const& seatId, Display const& display)
 {
-    // TODO
+    ;
 }
 
 void Coach::updateCeilingDisplays(std::string const& newText)
