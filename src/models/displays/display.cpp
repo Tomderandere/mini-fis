@@ -14,19 +14,19 @@ Display::Display(std::string const& initialText)
 
 void Display::updateText(std::string const& newText)
 {
-    // TODO
+    text=newText;
 }
 
 std::string Display::getText() const
 {
-    // TODO
+    
 
-    return "";
+    return text;
 }
 
 void Display::show() const
 {
-    // TODO
+    std::cout << getText() << std::endl;
 
     // Geben Sie das Ergebnis von `getText()` auf der Konsole aus.
 
