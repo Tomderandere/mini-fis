@@ -55,7 +55,25 @@ for( auto const& res : reservations){
 
 bool is_valid_for_route(Reservation const& reservation, std::vector<std::string> const& stops)
 {
-    // TODO
-
-    return true;
+    int from=-1;
+    int to=-1;
+  for (size_t i = 0; i < stops.size(); i++)
+  {
+    if (stops[i]==reservation.to
+)
+    {
+        to=i;
+    }
+    if (stops[i]==reservation.from
+    )
+        {
+            from=i;
+        } 
+  }
+  if (from == -1 || to == -1) {
+    return false;
 }
+ return from<to;
+  
+}
+
