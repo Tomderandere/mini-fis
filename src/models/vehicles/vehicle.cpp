@@ -24,7 +24,9 @@ void Vehicle::addReservation(size_t coachIndex, std::string const& seatId, Reser
 
 void Vehicle::showAllDisplays() const
 {
-    // TODO
+    for (const auto& coach : coaches) {
+        coach.showAllDisplays();
+    }
 }
 
 void Vehicle::showAllReservations() const

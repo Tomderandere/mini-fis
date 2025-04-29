@@ -34,15 +34,26 @@ void Coach::updateSeatDisplay(std::string const& seatId, std::string const& newT
 
 void Coach::showCeilingDisplays() const
 {
-    // TODO
+  for (Display el : ceiling_displays)
+  {
+    el.show();
+  }
+  
+    
 }
 
 void Coach::showSeatDisplays() const
 {
-    // TODO
+  
+    for (const auto& [seatId, display] : seat_displays)
+    {
+        
+        display.show(); 
+    }
 }
 
 void Coach::showAllDisplays() const
 {
-    // TODO
+    showCeilingDisplays();
+    showSeatDisplays();
 }
