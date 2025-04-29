@@ -19,7 +19,7 @@ void Vehicle::addStop(std::string const& stop)
 
 void Vehicle::addReservation(size_t coachIndex, std::string const& seatId, Reservation const& reservation)
 {
-    // TODO
+    reservations[coachIndex][seatId].push_back(reservation);
 }
 
 void Vehicle::showAllDisplays() const
