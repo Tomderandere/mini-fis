@@ -13,17 +13,23 @@ void Coach::addCeilingDisplay(Display const& display)
 
 void Coach::addSeatDisplay(std::string const& seatId, Display const& display)
 {
-    ;
+    seat_displays[seatId]= display;
 }
 
 void Coach::updateCeilingDisplays(std::string const& newText)
 {
-    // TODO
+   for (size_t i = 0; i < ceiling_displays.size(); i++)
+   {
+    ceiling_displays[i].updateText(newText);
+   }
 }
 
 void Coach::updateSeatDisplay(std::string const& seatId, std::string const& newText)
 {
-    // TODO
+   auto it = seat_displays.find(seatId);
+   if (it != seat_displays.end()) {
+    it->second.updateText(newText);
+}
 }
 
 void Coach::showCeilingDisplays() const
