@@ -8,7 +8,8 @@ Vehicle::Vehicle()
 
 void Vehicle::addCoach(Coach const& coach)
 {
-    // TODO
+coaches.push_back(coach);
+reservations.emplace_back();
 }
 
 void Vehicle::addStop(std::string const& stop)
