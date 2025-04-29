@@ -14,7 +14,7 @@ reservations.emplace_back();
 
 void Vehicle::addStop(std::string const& stop)
 {
-    // TODO
+    route.push_back(stop);
 }
 
 void Vehicle::addReservation(size_t coachIndex, std::string const& seatId, Reservation const& reservation)
