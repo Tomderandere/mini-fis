@@ -8,22 +8,34 @@ Coach::Coach()
 
 void Coach::addCeilingDisplay(Display const& display)
 {
-    // TODO
+    Coach::ceiling_displays.push_back(display);
 }
 
 void Coach::addSeatDisplay(std::string const& seatId, Display const& display)
 {
-    // TODO
+    Coach::seat_displays[seatId]=display;
 }
 
 void Coach::updateCeilingDisplays(std::string const& newText)
 {
-    // TODO
+    for (size_t i = 0; i < Coach::ceiling_displays.size(); i++)
+    {
+        Coach::ceiling_displays[i].updateText(newText);
+    }
+    
 }
 
 void Coach::updateSeatDisplay(std::string const& seatId, std::string const& newText)
 {
-    // TODO
+    if (Coach::seat_displays.find(seatId)!= Coach::seat_displays.end())
+    {
+     Coach::seat_displays[seatId]=newText;
+    }
+    
+      
+    
+    
+    
 }
 
 void Coach::showCeilingDisplays() const

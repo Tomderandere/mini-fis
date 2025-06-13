@@ -34,7 +34,7 @@ struct Coach {
     /// Zeigt alle Decken-Displays an.
     void showCeilingDisplays() const;
 
-    /// Zeigt alle Sitzplatz-Displays an.
+    /// Zeigt alle Sitzplatz-Displays an.h
     void showSeatDisplays() const;
 
     /// Zeigt alle Displays an (Decken- und Sitzplatz-Displays).
